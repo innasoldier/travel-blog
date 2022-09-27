@@ -1,0 +1,178 @@
+<!doctype html>
+ 
+<html lang="en">
+  <head>
+    <title>Inna's Travels</title>
+		<link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../styles/main.css" media="screen">
+		<link rel="stylesheet" media="screen and (max-width: 767px)" href="../styles/mobile.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+		<style>
+			
+			.background-img {
+				background: url(../images/marks-header.jpg);
+			}
+			
+			table { 
+				width: 750px; 
+				border-collapse: collapse; 
+				margin:50px auto;
+			}
+			/* Zebra striping */
+			tr:nth-of-type(odd) { 
+				background: #eee; 
+				}
+
+			th { 
+				background: darkorange; 
+				color: white; 
+				font-weight: bold; 
+				}
+
+			td, th { 
+				padding: 10px; 
+				border: 1px solid #ccc; 
+				text-align: left; 
+				font-size: 18px;
+				}
+
+			@media screen and (max-width: 760px) {
+				table { 
+						width: 100%; 
+				}
+
+				/* Force table to not be like tables anymore */
+				table, thead, tbody, th, td, tr { 
+					display: block; 
+				}
+
+				/* Hide table headers (but not display: none;, for accessibility) */
+				thead tr { 
+					position: absolute;
+					top: -9999px;
+					left: -9999px;
+				}
+
+				tr { border: 1px solid #ccc; }
+
+				td { 
+					/* Behave  like a "row" */
+					border: none;
+					border-bottom: 1px solid #eee; 
+					position: relative;
+					padding-left: 50%; 
+				}
+
+				td:before { 
+					/* Now like a table header */
+					position: absolute;
+					/* Top/left values mimic padding */
+					top: 6px;
+					left: 6px;
+					width: 45%; 
+					padding-right: 10px; 
+					white-space: nowrap;
+					/* Label the data */
+					content: attr(data-column);
+
+					color: #000;
+					font-weight: bold;
+				}
+			}
+		</style>
+  </head> 
+
+  <body>
+		<div id="wrapper">
+			<header> <!-- header content -->
+				<nav class="navigation"> <!--main navigation -->
+					<a id="logo" href="../index.html">Inna's Travels</a>
+					<ul class="main-nav">
+						<li><a class="menu" href="../index.html">Home</a></li>
+						<li><a class="menu" href="../about.html">About Me</a></li>
+						<li><a class="menu" href="../destinations.html">Destinations</a></li> 
+						<li class="has_popup"><a href="#">Countries <span style="color:#62566c">&#9660;</span></a>
+							
+							<ul id="countries_list">
+								<li><a href="../ukraine.html">Ukraine</a></li>
+								<li><a href="../turkey.html">Turkey</a></li>
+								<li><a href="../uae.html">The UAE</a></li>
+								<li><a href="#">Egypt</a></li>
+								<li><a href="#">Canada</a></li>
+								<li><a href="#">The USA</a></li>
+							</ul>
+						
+					  </li>
+					</ul>
+				</nav>
+				<div class="background-img">
+					<div id="header-text">
+		        <h1>Marking Table</h1>
+					</div>
+		    </div>
+			</header>
+
+<section>
+	<table>
+  <thead>
+    <tr>
+      <th>Criteria</th>
+      <th>Page Name</th>
+      <th>Line Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-column="Criteria">A class selector in an embedded style</td>
+			<td data-column="Page"><a href="../about.html">About me</a></td>
+      <td data-column="Line">92</td>
+    </tr>
+		<tr>
+      <td data-column="Criteria">An inline style</td>
+      <td data-column="Page"><a href="../index.html">Home</a></td>
+      <td data-column="Line">169</td>
+    </tr>
+		<tr>
+      <td data-column="Criteria">An external CSS file</td>
+      <td data-column="Page"><a href="../index.html">Home</a></td>
+      <td data-column="Line">24</td>
+    </tr>
+		<tr>
+      <td data-column="Criteria">A form</td>
+      <td data-column="Page"><a href="../about.html">About Me</a></td>
+      <td data-column="Line">244</td>
+    </tr>
+    <tr>
+      <td data-column="Criteria"> A table</td>
+      <td data-column="Page"><a href="../destinations.html">Destinations</a></td>
+      <td data-column="Line">178</td>
+    </tr>
+		<tr>
+      <td data-column="Criteria">A custom image with width, alt, and height attributes set</td>
+      <td data-column="Page"><a href="../index.html">Home</a></td>
+      <td data-column="Line">153</td>
+    </tr>
+		<tr>
+      <td data-column="Criteria">A list</td>
+      <td data-column="Page"><a href="../index.html">Home</a></td>
+      <td data-column="Line">118</td>
+    </tr>
+    <tr>
+			<td data-column="Criteria">Salsa Server link</td>
+      <td data-column="Page"><a href="http://salsa.uwdce.ca/~i.soldatkina/HTML_CSS/project/index.html" 
+																title="http://salsa.uwdce.ca/~i.soldatkina/HTML_CSS/project/index.html">Salsa Server</a></td>
+			<td data-column="Line"></td>
+    </tr>
+
+  </tbody>
+</table>
+</section>
+<footer>
+<p class="copyright">&copy; Copyright Travel Blog - Inna Soldatkina 2022</p>
+</footer>
+		</div>
+  </body>
+</html>

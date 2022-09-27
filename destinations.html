@@ -1,0 +1,273 @@
+<!doctype html>
+<!--
+			|||||||||||||||||||||||||||||||||||	                               
+			||                               ||
+			||                               ||
+			||       Capstone Project        ||
+			||        Inna Soldatkina        ||
+			||          Travel Blog          ||
+			||                               ||
+			||           | *\ / *|           ||
+			||||||||||||||  ( )  ||||||||||||||
+			             |__/-\__| 
+									/ ******* \
+								 / ********* \
+							  /_____________\
+-->  
+<html lang="en">
+  <head>
+    <title>Inna's Travels - Destinations</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css?family=Baskervville%7CPacifico&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/main.css" media="all">
+		<link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
+		<link rel="stylesheet" media="screen and (max-width: 767px)" href="styles/mobile.css">
+		<link rel="shortcut icon" href="images/fav-icon.ico">
+		<style>
+			
+			.background-img {
+				background: url(images/destinations-header.jpg);
+			}
+			
+			section {
+				text-align: center;
+			  background-color: #fff;
+			}
+			
+			#map-section h2{
+				margin-bottom: 30px;
+			}
+			
+			table { 
+				width: 750px; 
+				border-collapse: collapse; 
+				margin: 50px auto;
+			}
+
+			/* odd rows will have a different color. Zebra effect */
+			tr:nth-of-type(odd) { 
+				background: #eee; 
+				}
+
+			th { 
+				background: darkorange; 
+				color: white; 
+				}
+
+			td, th { 
+				padding: 10px; 
+				border: 1px solid #ccc; 
+				text-align: left; 
+				font-size: 18px;
+				}
+
+		  @media screen and (max-width: 760px) {
+
+				#header-text {
+					display: none;
+				}
+				
+			table { 
+				width: 100%; 
+			}
+
+			/* Changes the behavour of the table rows */
+			table, thead, tbody, th, td, tr { 
+				display: block; 
+			}
+
+			/* Hides table headers (but not display: none, for betteer accessibility) */
+			thead tr { 
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+
+			tr { 
+				border: 1px solid #ccc; 
+			}
+
+			td { 
+				/* Behaves like a "row" */
+				border: none;
+				border-bottom: 1px solid #eee; 
+				position: relative;
+				padding-left: 50%; 
+			}
+
+			td:before { 
+				position: absolute;
+				top: 6px;
+				left: 6px;
+				width: 45%; 
+				padding-right: 10px; 
+				white-space: nowrap;
+				content: attr(data-column);
+				color: #000;
+				font-weight: bold;
+				}
+			}
+			
+		</style>
+			<!--[if LTE IE 9]>
+			<script src="old_ie.js"></script>
+			<style type="text/css">
+
+				header, 
+				nav,  
+				footer,
+        section,
+        div{ 
+				  display: block;
+        }
+  
+        div.destination-description{
+          display: none;
+        }
+
+        div.destination-container{
+          display: inline;
+          margin: 15px 28px;
+        }
+
+			</style> 
+	  <![endif]-->
+  </head> 
+
+  <body id="destinations-page">
+		<!--[if LTE IE 9]>
+    <div id="ie_warning"> Please update your browser in orderder to view the page properly</div>
+    <![endif]-->
+		<div id="wrapper">
+			<header> <!-- header content -->
+				<nav class="navigation"> <!--main navigation -->
+					<a id="logo" href="index.html" title="Page Logo">Inna's Travels</a>
+					<ul class="main-nav">
+						<li><a class="menu" id="menu_home" href="index.html" title="Main website page">Home</a></li>
+						<li><a class="menu" id="menu_about" href="about.html" title="More about Inna">About Me</a></li>
+						<li><a class="menu" id="menu_destinations" href="destinations.html" title="Short overview of visited countries">Destinations</a></li> 
+						<li class="has_popup"><a id="menu_countries" href="#">Countries <span style="color:#62566c">&#9660;</span></a>
+							
+							<ul id="countries_list"> <!-- drop down menu start -->
+								<li><a href="ukraine.html" title="Page about Ukraine ">Ukraine</a></li>
+								<li><a href="turkey.html" title="Page about Turkey">Turkey</a></li>
+								<li><a href="uae.html" title="Page about UAE">The UAE</a></li>
+								<li><a href="#">Egypt</a></li> <!-- next three pages are coming soon -->
+								<li><a href="#">Canada</a></li>
+								<li><a href="#">The USA</a></li>
+							</ul> <!-- drop down menu end -->
+							
+					  </li>
+					</ul>
+				</nav> <!-- end of main navigation -->
+				<div class="background-img">
+					<div id="header-text">
+		        <h1>Destinations</h1>
+					</div>
+		    </div>
+			</header>
+			
+      <section id="map-section">
+				<h2>List of Countries Visited</h2>
+				<div id="map"> 
+				  <img src="images/map.jpg" alt="world map" width="700" height="358"/>
+				</div>
+	
+				<table>
+					<thead>
+						<tr>
+							<th>Country</th>
+							<th>Language</th>
+							<th>Population</th>
+							<th>Currency</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-column="Name">1. Ukraine</td>
+							<td data-column="Language">Ukrainian</td>
+							<td data-column="Population">42.2 million</td>
+							<td data-column="Currency">Hryvna</td>
+						</tr>
+						<tr>
+							<td data-column="Name">2. Turkey</td>
+							<td data-column="Language">Turkish</td>
+							<td data-column="Population">80.8 million</td>
+							<td data-column="Currency">Turkish Lira</td>
+						</tr>
+						<tr>
+							<td data-column="Name">3. The UAE</td>
+							<td data-column="Language">Arabic</td>
+							<td data-column="Population">9.4 million</td>
+							<td data-column="Currency">Dirham</td>
+						</tr>
+						<tr>
+							<td data-column="Name">4. Egypt</td>
+							<td data-column="Language">Arabic</td>
+							<td data-column="Population">97.5 million</td>
+							<td data-column="Currency">Egyptian Pound</td>
+						</tr>
+						<tr>
+							<td data-column="Name">5. Canada</td>
+							<td data-column="Language">English / French</td>
+							<td data-column="Population">37.5 million</td>
+							<td data-column="Currency">Cannadian Dollar</td>
+						</tr>
+						<tr>
+							<td data-column="Name">6. The USA</td>
+							<td data-column="Language">English</td>
+							<td data-column="Population">327.2 million</td>
+							<td data-column="Currency">US Dollar</td>
+						</tr>
+		      </tbody>
+        </table>
+			</section>
+			
+			<section id="favourites">
+			  <div id="destinations-heading"><h2>Recent Places</h2></div>
+				<div id="dest-par"> These are the most recent places I had a chance to visit. 
+					Check out some useful information and beautiful pictures. You can find more posts on my Blog page. </div>
+			  <div id="destinations"> <!-- "wrapper" for 3 posts -->
+				
+					<div class="destination-container"> <!-- post 1 -->
+						<img src="images/side-dest.jpg" alt=""/>
+						<div class="destination-description">
+						  <div class="dest-heading"><h3>Manavgat</h3></div>
+							<p>Explore one of the famous historic sites of Turkey</p>
+						</div>
+					</div>
+
+					<div class="destination-container"> <!-- post 2 -->
+						<img src="images/dubai-dest.jpg" alt="dest2"/>
+						<div class="destination-description">
+							<div class="dest-heading"><h3>Dubai - UAE</h3></div>
+							<p>How to make your vacation in Dubai memorable</p>
+						</div>
+					</div>		
+
+					<div class="destination-container"> <!-- post 2 -->
+						<img src="images/istanbul-dest.jpg" alt="dest2"/>
+						<div class="destination-description">
+							<div class="dest-heading"><h3>Istambul</h3></div>
+							<p>The city that will turn moments into memories</p>
+						</div>
+					</div>
+					
+			  </div>
+			</section>
+			<footer>
+				<nav>
+					<ul>
+						<li><a href="index.html" title="Main page">Home</a></li>
+						<li><a href="about.html" title="Link to a contact form">Contact Me</a></li>
+						<li><a href="destinations.html" title="Main blog page">Blog</a></li>
+						<li><a href="#" title="Privacy Policy Statement">Privacy Policy</a></li>
+					</ul>
+			  </nav>
+			<p class="copyright">&copy; Copyright Travel Blog - Inna Soldatkina 2022</p>
+			</footer>
+		</div>
+  </body>
+</html>

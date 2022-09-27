@@ -1,0 +1,269 @@
+/*
+
+				   | *\ / *|
+			||||||  ( )  ||||||||||||||||||||||
+			||   |__/-\__|                   ||
+			||                               ||
+			||                               ||
+			||    Travel Blog - mobile.css   ||
+			||        Capstone Project       ||
+			||        Inna Soldatkina        ||
+			||                               ||
+			||                               ||
+			|||||||||||||||||||||||||||||||||||
+							   ___/      \___
+						    /  **********  \
+						   /  ************* \
+					    /__________________\
+
+*/
+
+.background-img {
+	width: 100%; /*the most important for responsive design*/
+}
+
+#wrapper {
+	width: 100%;
+}
+
+.background-img {
+	letter-spacing: 0.2em; /*should be smaller to be visible on small screens*/
+}
+
+h1 {
+	font-size: 1.7em;
+}
+
+.navigation ul {
+	float: left;
+	display: block;
+
+}
+.navigation ul li {
+	display: block;
+	clear: both;
+}
+
+ul.main-nav {
+	padding-left: 0;
+	padding-top: 0px;
+	padding-bottom: 35px;
+}
+
+header nav a  {
+	letter-spacing: 0.1em;
+	line-height: 1em;
+	font-size: 0.9em;
+}
+	
+.navigation ul a:after {  /*underline with gradient for mobile menu*/
+	margin-left: 20px;
+	content: '';
+	position: absolute;
+	width: 123px;
+	height: 4px;
+	left: 0;
+	bottom: 0;
+	background-image: linear-gradient(to right, darkorange, blue);
+}
+
+.navigation { /*making navigation visible on mobile, also min-height is set to cover the header background */
+	background-color: #fff;
+	width: 185px;
+	min-height: 427px;
+	position: absolute;
+	padding-top: 125px;
+	z-index: 5;
+}
+
+.has_popup {
+  position: relative;
+}
+
+ul#countries_list{ /*popup menu style*/
+	opacity: 0;
+	text-align: left;
+	position: absolute;
+	top: -5px;
+	left: 140px;
+	background-color: #eae1e4;
+	width: 155px;
+	box-shadow: 0 8px 10px rgba(0,0,0,0.6);
+	padding: 5px;
+	z-index: 10;
+}
+
+/* Show popup on a hover */
+nav ul li.has_popup:hover #countries_list{
+	opacity: 1;
+}
+
+#countries_list li{
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+#countries_list li a{
+	font-size: 0.9em;
+	padding-left: 9px;
+	
+}
+
+#countries_list li:hover{
+	background-color: #e7d5c9;
+	color: #453446;
+}	
+
+a#logo {
+	position: absolute; /*to be on top of navigation, higher z-index is also important */
+	z-index: 10;
+	top: 20px;
+	right: 22px;
+	font-size: 28px;
+}
+
+#header-text {
+	font-size: 0.7em;
+	margin-left: 190px; /*not to be covered by side navigation*/
+	margin-top: 160px;
+}
+
+div#social-media {
+  visibility: hidden; 
+}
+
+.blockquote-wrapper {
+	width: 100%;	
+	display: flex;
+	min-height: 200px;
+	padding: 0 20px;
+	background-color: #5c5971;
+} 
+
+.blockquote h3 {
+ font-size: 2.0em;
+}
+
+.blockquote h4 {
+ font-size: 1.5em;
+}
+
+.blockquote {
+	width: 100%;
+	margin: 40px auto;
+	align-self: center;
+}
+
+.blockquote h3:before {
+	display: none;
+}
+
+.blockquote h3:after {
+	display: none;
+}	
+
+#image1 {
+	width: 100%;
+}
+
+#image1 img {
+  width: 70%; /*100% looks too big on mobile*/
+	height: auto;
+}
+
+#posts-container {
+	flex-direction: column;
+}
+
+.posts-item {
+	width: 250px;
+	margin: 25px auto;
+}
+
+div#info {
+	min-width: 300px;
+}
+#info-heading h2{
+	
+	text-align: left;
+	padding-left: 50px;
+	padding-right: 0px;
+
+}
+
+ #destinations  {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#destinations-heading {
+	width: 100%;
+	font-size: 1.4em;
+}
+
+#dest-par {
+	width: 100%;
+	margin: 20px auto;
+	font-size: 1.4em;
+	padding: 0 20px;
+}
+
+#dest-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.destination-container {
+	margin: 15px auto;
+
+}
+
+.destination-container img{
+	margin: 0 auto;
+	width: 50%;
+	height: auto;
+	text-align: center;		
+}
+
+.dest-heading {
+	display: none;
+}
+
+
+.destination-description p {
+	width: 100%;
+	font-size: 1.5em;
+	padding: 0 15px;
+}
+
+#map img {
+	width: 100%;
+	height: auto;
+}
+
+footer {
+	width: 100%;
+	height: auto;
+}
+
+footer nav a {
+	margin-right: 10px;
+	margin-left: 5px;
+	font-size: 0.7em;
+	color: #fff;
+}
+
+footer nav li:after { /* adding a slash after each menu item */
+	display: none;
+}
+
+footer .copyright {
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 46px;
+	padding-bottom: 40px;
+	color: #ddd;
+} 

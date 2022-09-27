@@ -1,0 +1,52 @@
+/*
+
+				   | *\ / *|
+			||||||  ( )  ||||||||||||||||||||||
+			||   |__/-\__|                   ||
+			||                               ||
+			||                               ||
+			||    Travel Blog - print.css    ||
+			||        Capstone Project       ||
+			||        Inna Soldatkina        ||
+			||                               ||
+			||                               ||
+			|||||||||||||||||||||||||||||||||||
+							   ___/      \___
+						    /  **********  \
+						   /  ************* \
+					    /__________________\
+			
+*/ 
+div.destination-container{
+	display: inline;
+	margin: 15px 28px;
+}
+
+div#image1 img {
+	width: 180px;
+	height: auto;
+}
+
+.insta-container img {
+	width: 100px;
+	height: auto;
+}
+
+#contact_form,
+#contact-form h2, 
+.fa, 
+#social-media,
+div.destination-description,
+div#imgage1,
+nav,
+footer,
+header,
+.blockquote h3:after,
+.blockquote h3:before {
+  display: none; 
+}
+
+#info {
+	min-height: 200px;
+}
+
